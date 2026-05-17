@@ -5,17 +5,30 @@ import pickle
 # ── Load model and encoders ──────────────────────────
 @st.cache_resource
 def load_files():
-    model      = pickle.load(open('car_model.pkl',       'rb'))
-    le_brand   = pickle.load(open('le_brand.pkl',        'rb'))
-    le_car     = pickle.load(open('le_car.pkl',          'rb'))
-    le_variant = pickle.load(open('le_variant.pkl',      'rb'))
-    le_fuel    = pickle.load(open('le_fuel.pkl',         'rb'))
+    model      = pickle.load(open('car_model.pkl', 'rb'))
+    le_brand   = pickle.load(open('le_brand.pkl', 'rb'))
+    le_car     = pickle.load(open('le_car.pkl', 'rb'))
+    le_variant = pickle.load(open('le_variant.pkl', 'rb'))
+    le_fuel    = pickle.load(open('le_fuel.pkl', 'rb'))
     le_trans   = pickle.load(open('le_transmission.pkl', 'rb'))
-    le_owner   = pickle.load(open('le_owner.pkl',        'rb'))
-    import gzip
-    mapping    = pickle.load(gzip.open('car_mapping.pkl', 'rb'))
-    return model, le_brand, le_car, le_variant, le_fuel, le_trans, le_owner, mapping
+    le_owner   = pickle.load(open('le_owner.pkl', 'rb'))
 
+    import gzip
+    mapping = pickle.load(gzip.open('car_mapping.pkl', 'rb'))
+
+    return (
+        model,
+        le_brand,
+        le_car,
+        le_variant,
+        le_fuel,
+        le_trans,
+        le_owner,
+        mapping
+    )
+
+
+# ── Load everything ──────────────────────────────────
 model, le_brand, le_car, le_variant, le_fuel, le_trans, le_owner, mapping = load_files()
 
 # ── Page Setup ───────────────────────────────────────
