@@ -16,7 +16,7 @@ def load_files():
     mapping    = pickle.load(gzip.open('car_mapping.pkl', 'rb'))
     return model, le_brand, le_car, le_variant, le_fuel, le_trans, le_owner, mapping
 
-    model, le_brand, le_car, le_variant, le_fuel, le_trans, le_owner, mapping = load_files()
+model, le_brand, le_car, le_variant, le_fuel, le_trans, le_owner, mapping = load_files()
 
 # ── Page Setup ───────────────────────────────────────
 st.set_page_config(
