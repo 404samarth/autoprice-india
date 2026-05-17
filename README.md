@@ -1,47 +1,98 @@
 # 🚗 Used Car Price Predictor
 
-A Machine Learning-powered web application that predicts the resale price of used cars based on various features such as brand, model, year, fuel type, transmission, mileage, ownership history, and more.
+A Machine Learning project that predicts used car prices using **Regression Models** and real-world automobile data — built with Python and deployed using Streamlit.
 
-## 📌 Project Overview
+🔗 **Live Application → https://autoprice-predictor-samarth404.streamlit.app/**
 
-The Used Car Price Predictor helps users estimate the market value of a used car using historical data and machine learning algorithms. This project demonstrates the complete ML workflow including:
+---
 
-- Data Cleaning & Preprocessing
-- Exploratory Data Analysis (EDA)
+## 📌 About the Project
+
+This project predicts the resale value of used cars based on important vehicle features like fuel type, transmission, mileage, engine power, and ownership history.
+
+The project covers the complete ML workflow:
+- Data Cleaning
 - Feature Engineering
-- Model Training & Evaluation
-- Model Deployment
-- Web Application Integration
-
-The goal is to provide accurate and reliable price predictions for second-hand vehicles.
-
----
-
-## 🧠 Machine Learning Workflow
-
-1. Data Collection
-2. Data Cleaning
-3. Exploratory Data Analysis
-4. Feature Engineering
-5. Model Selection
-6. Model Training
-7. Hyperparameter Tuning
-8. Evaluation
-9. Deployment
+- Model Training
+- Regression Analysis
+- Model Evaluation
+- Streamlit Deployment
 
 ---
 
-## 📂 Project Structure
+## 🧠 Models Used
+
+| Model | Performance |
+|---|---|
+| Linear Regression | High Accuracy |
+| Random Forest Regressor | Good Performance |
+| Decision Tree Regressor | Moderate Accuracy |
+| Gradient Boosting | Optimized Predictions |
+
+---
+
+## 📊 Features Used for Prediction
+
+| Feature | Description |
+|---|---|
+| Car Name | Brand & Model |
+| Year | Manufacturing Year |
+| Fuel Type | Petrol, Diesel, CNG, etc. |
+| Transmission | Manual / Automatic |
+| KM Driven | Distance Driven |
+| Mileage | Fuel Efficiency |
+| Engine | Engine Capacity |
+| Power | Horsepower |
+| Seats | Seating Capacity |
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|---|---|
+| Language | Python |
+| ML Libraries | scikit-learn, Pandas, NumPy |
+| Visualization | Matplotlib, Seaborn |
+| Deployment | Streamlit |
+| Model Saving | Pickle / Joblib |
+
+---
+
+## 🚀 Run Locally
+
+```bash
+# Clone Repository
+git clone https://github.com/404samarth/used-car-price-predictor.git
+
+# Go to Project Folder
+cd used-car-price-predictor
+
+# Install Dependencies
+pip install -r requirements.txt
+
+# Run Streamlit App
+streamlit run app.py
+```
+
+---
+
+## 📁 Project Structure
 
 ```bash
 used-car-price-predictor/
-│
-├── data/                   # Dataset files
-├── notebooks/              # Jupyter notebooks
-├── models/                 # Saved ML models
-├── static/                 # CSS, JS, Images
-├── templates/              # HTML templates
-├── app.py                  # Flask application
-├── requirements.txt        # Python dependencies
-├── README.md               # Project documentation
-└── model.pkl               # Trained model
+├── app.py
+├── model.pkl
+├── requirements.txt
+├── data/
+├── notebooks/
+└── README.md
+```
+
+---
+
+## 👨‍💻 Created By
+
+### samarth404
+
+🔗 GitHub: https://github.com/404samarth
