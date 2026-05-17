@@ -13,7 +13,7 @@ def load_files():
     le_trans   = pickle.load(open('le_transmission.pkl', 'rb'))
     le_owner   = pickle.load(open('le_owner.pkl',        'rb'))
     import gzip
-mapping    = pickle.load(gzip.open('car_mapping.pkl', 'rb'))
+    mapping    = pickle.load(gzip.open('car_mapping.pkl', 'rb'))
     return model, le_brand, le_car, le_variant, le_fuel, le_trans, le_owner, mapping
 
 model, le_brand, le_car, le_variant, le_fuel, le_trans, le_owner, mapping = load_files()
