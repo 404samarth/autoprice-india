@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import pickle
+import gzip
 
 # ── Load model and encoders ──────────────────────────
 @st.cache_resource
@@ -13,20 +14,18 @@ def load_files():
     le_trans   = pickle.load(open('le_transmission.pkl', 'rb'))
     le_owner   = pickle.load(open('le_owner.pkl', 'rb'))
 
-    import gzip
     mapping = pickle.load(gzip.open('car_mapping (1).pkl', 'rb'))
 
     return (
-        model (1),
+        model,
         le_brand,
         le_car,
         le_variant,
         le_fuel,
         le_trans,
         le_owner,
-        mapping (1)
+        mapping
     )
-
 
 # ── Load everything ──────────────────────────────────
 model, le_brand, le_car, le_variant, le_fuel, le_trans, le_owner, mapping = load_files()
