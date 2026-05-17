@@ -32,31 +32,32 @@ model, le_brand, le_car, le_variant, le_fuel, le_trans, le_owner, mapping = load
 
 # ── Page Setup ───────────────────────────────────────
 st.set_page_config(
-    page_title="Indian Car Price Predictor",
+    page_title="Used Car Price Predictor",
     page_icon="🚗",
     layout="centered"
 )
 
 st.title("🚗 Indian Car Price Predictor")
-st.caption("Get estimated resale price based on real CarDekho data")
+st.caption("Get estimated resale price based on real data")
+st.caption("Created by Samarth")
 st.divider()
 
 # ── Step 1: Brand ────────────────────────────────────
-st.markdown("### Step 1 — Select Brand")
+st.markdown("### Select Brand")
 brand = st.selectbox("Brand", sorted(mapping.keys()), label_visibility="collapsed")
 
 # ── Step 2: Car Model ────────────────────────────────
-st.markdown("### Step 2 — Select Car Model")
+st.markdown("### Select Car Model")
 car = st.selectbox("Car Model", sorted(mapping[brand].keys()), label_visibility="collapsed")
 
 # ── Step 3: Variant ──────────────────────────────────
-st.markdown("### Step 3 — Select Variant")
+st.markdown("### Select Variant")
 variant = st.selectbox("Variant", mapping[brand][car], label_visibility="collapsed")
 
 st.divider()
 
 # ── Step 4: Other Details ────────────────────────────
-st.markdown("### Step 4 — Enter More Details")
+st.markdown("### Enter More Details")
 
 col1, col2 = st.columns(2)
 
@@ -102,4 +103,5 @@ if st.button("🔍 Predict Resale Price", use_container_width=True):
     except Exception as e:
         st.error(f"Something went wrong: {e}")
 
-st.caption("Built with CarDekho dataset · Random Forest Model · Made by Samarth")
+st.caption("Built with CarDekho dataset · Random Forest Model · Made by samarth404")
+sr.caption("To view more projects: https://github.com/404samarth") 
