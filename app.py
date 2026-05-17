@@ -32,12 +32,12 @@ model, le_brand, le_car, le_variant, le_fuel, le_trans, le_owner, mapping = load
 
 # ── Page Setup ───────────────────────────────────────
 st.set_page_config(
-    page_title="Used Car Price Predictor",
+    page_title="Car Price Predictor",
     page_icon="🚗",
     layout="centered"
 )
 
-st.title("🚗 Indian Car Price Predictor")
+st.title("🚗 Used Car Price Predictor")
 st.caption("Get estimated resale price based on real data")
 st.caption("Created by Samarth")
 st.divider()
@@ -103,5 +103,5 @@ if st.button("🔍 Predict Resale Price", use_container_width=True):
     except Exception as e:
         st.error(f"Something went wrong: {e}")
 
-st.caption("Built with CarDekho dataset · Random Forest Model · Made by samarth404")
-sr.caption("To view more projects: https://github.com/404samarth") 
+st.caption("Built with existing dataset · Random Forest Model · Made by samarth404")
+st.caption("To view more projects: https://github.com/404samarth") 
